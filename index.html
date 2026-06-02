@@ -1,12 +1,289 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Leheng Zhang</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f6f7fb;
+      --card: #ffffff;
+      --ink: #172033;
+      --muted: #5e6a7d;
+      --accent: #315fbe;
+      --line: #dfe5f0;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+      color: var(--ink);
+      background: var(--bg);
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .page {
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 32px 20px 48px;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 32px;
+      align-items: center;
+      padding: 32px;
+      margin-bottom: 24px;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      box-shadow: 0 18px 40px rgba(23, 32, 51, 0.08);
+    }
+
+    .portrait {
+      width: 200px;
+      height: 240px;
+      object-fit: cover;
+      border-radius: 18px;
+      border: 1px solid var(--line);
+      background: #ffffff;
+    }
+
+    h1,
+    h2,
+    h3 {
+      line-height: 1.25;
+      margin: 0;
+    }
+
+    h1 {
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      letter-spacing: -0.04em;
+    }
+
+    h2 {
+      margin-bottom: 16px;
+      font-size: 1.35rem;
+    }
+
+    h3 {
+      margin-bottom: 6px;
+      font-size: 1.02rem;
+    }
+
+    .subtitle {
+      margin: 12px 0 18px;
+      font-size: 1.1rem;
+      color: var(--muted);
+    }
+
+    .contact,
+    .actions,
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .pill,
+    .button {
+      display: inline-flex;
+      align-items: center;
+      min-height: 36px;
+      padding: 7px 12px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: #f9fbff;
+      color: var(--ink);
+      font-size: 0.95rem;
+    }
+
+    .button {
+      border-color: transparent;
+      background: var(--accent);
+      color: #ffffff;
+      font-weight: 700;
+    }
+
+    .button.secondary {
+      border-color: var(--line);
+      background: #ffffff;
+      color: var(--accent);
+    }
+
+    .section {
+      padding: 28px;
+      margin-top: 18px;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+    }
+
+    .item {
+      padding: 18px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .item:first-of-type {
+      padding-top: 0;
+      border-top: 0;
+    }
+
+    .meta {
+      margin: 0 0 8px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    ul {
+      margin: 8px 0 0;
+      padding-left: 20px;
+    }
+
+    li + li {
+      margin-top: 6px;
+    }
+
+    footer {
+      margin-top: 28px;
+      color: var(--muted);
+      text-align: center;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 720px) {
+      .hero {
+        grid-template-columns: 1fr;
+        padding: 24px;
+      }
+
+      .portrait {
+        width: 180px;
+        height: 216px;
+      }
+    }
+  </style>
 </head>
 <body>
-  <h1>Leheng Zhang</h1>
-  <p>Undergraduate student in Computer Science.</p>
-  <p>Research interests: Multimodal Learning, NLP, Embodied AI, AI for Science.</p>
+  <main class="page">
+    <section class="hero">
+      <img class="portrait" src="证件照.jpg" alt="Portrait of Leheng Zhang">
+      <div>
+        <h1>Leheng Zhang</h1>
+        <p class="subtitle">B.Eng. Candidate in Computer Science and Technology at South China Normal University.</p>
+        <div class="contact" aria-label="Contact information">
+          <span class="pill">Guangzhou, Guangdong, China</span>
+          <span class="pill">Phone: 13600023894</span>
+          <a class="pill" href="mailto:lehengzhang@m.scnu.edu.cn">lehengzhang@m.scnu.edu.cn</a>
+        </div>
+        <div class="actions">
+          <a class="button" href="Leheng%20Zhang%20CV.pdf">Download CV</a>
+          <a class="button secondary" href="papers.html">Selected Papers</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <h2>About</h2>
+      <p>
+        I am a junior undergraduate student in Computer Science and Technology at South China Normal University.
+        My research interests center on multimodal affective computing, multimodal learning, natural language processing,
+        embodied AI, and AI for science.
+      </p>
+      <div class="tags" aria-label="Research interests">
+        <span class="pill">Multimodal Affective Computing</span>
+        <span class="pill">Multimodal Learning</span>
+        <span class="pill">NLP</span>
+        <span class="pill">Embodied AI</span>
+        <span class="pill">AI for Science</span>
+      </div>
+    </section>
+
+    <section class="section" id="education">
+      <h2>Education</h2>
+      <article class="item">
+        <h3>South China Normal University</h3>
+        <p class="meta">B.Eng. Candidate in Computer Science and Technology, Junior | Sep 2023 - Present | Guangzhou, Guangdong</p>
+        <ul>
+          <li>Average score: 89.4/100; GPA: 3.94/5.00.</li>
+          <li>Major ranking: 4/153, top 2.6%.</li>
+          <li>CET-4: 647; CET-6: 571; IELTS: 7.0.</li>
+          <li>Honors: First-Class Outstanding Student Scholarship, School of Computer Science, SCNU (2023-2024, 2024-2025); Second Prize, SCNU Undergraduate Innovation Award (2024).</li>
+        </ul>
+      </article>
+      <article class="item">
+        <h3>University of British Columbia</h3>
+        <p class="meta">International Visiting Student | Jul 2024 - Aug 2024 | Vancouver, Canada</p>
+        <ul>
+          <li>Completed Music: An introduction to Electrical &amp; Computer Engineering.</li>
+          <li>Completed Music Laboratory: Hands on Learning.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="section" id="research">
+      <h2>Research Experience</h2>
+      <article class="item">
+        <h3>Targeted Drug Discovery for Epstein-Barr Virus (EBV)</h3>
+        <p class="meta">Advisor: Prof. Sijie Mai, SCNU; in collaboration with Sun Yat-sen University Cancer Center | Jul 2025</p>
+        <ul>
+          <li>Applied diffusion models to develop targeted drug candidates for the DNA-binding domain (DBD) or other regions of EBNA1 protein.</li>
+        </ul>
+      </article>
+      <article class="item">
+        <h3>Multimodal Affective Computing</h3>
+        <p class="meta">Advisor: Prof. Sijie Mai, SCNU | Jul 2025</p>
+        <ul>
+          <li>Conducted multimodal sentiment analysis using pretrained language models and multimodal large language models.</li>
+          <li>Prepared two papers under submission to ACM Multimedia and two first-author papers under submission to EMNLP.</li>
+          <li>One ACM Multimedia submission received an average score of 3.6 with no negative reviews and may have the possibility of being selected as an Oral presentation.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="section" id="experience">
+      <h2>Competition And Project Experience</h2>
+      <article class="item">
+        <h3>Operating System Design Contest, South China Regional</h3>
+        <p class="meta">Jan 2026</p>
+        <ul>
+          <li>Developed an LLM-driven robotic arm system for board-game playing, with the related software registered as a computer software copyright.</li>
+        </ul>
+      </article>
+      <article class="item">
+        <h3>Embodied AI Robotic Arm for Board Game Playing</h3>
+        <p class="meta">Advisor: Prof. Sijie Mai, SCNU | Dec 2024</p>
+        <ul>
+          <li>Debugged the robotic arm, fine-tuned large language models, and studied robotic control methods for board-game playing tasks such as Gomoku and Go.</li>
+          <li>Developed an LLM-driven robotic arm system for autonomous board-game playing.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="section" id="goals">
+      <h2>Academic Goal</h2>
+      <p>My long-term plan is to pursue graduate study and doctoral-level research in artificial intelligence.</p>
+    </section>
+
+    <footer>
+      <p>Last updated: 2026</p>
+    </footer>
+  </main>
 </body>
 </html>

@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Selected Papers | Leheng Zhang</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f6f7fb;
+      --card: #ffffff;
+      --ink: #172033;
+      --muted: #5e6a7d;
+      --accent: #315fbe;
+      --line: #dfe5f0;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+      color: var(--ink);
+      background: var(--bg);
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .page {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 32px 20px 48px;
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      align-items: center;
+      margin-bottom: 22px;
+      color: var(--muted);
+    }
+
+    .hero,
+    .paper,
+    .section {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      box-shadow: 0 18px 40px rgba(23, 32, 51, 0.07);
+    }
+
+    .hero {
+      padding: 34px;
+      margin-bottom: 20px;
+    }
+
+    .paper,
+    .section {
+      padding: 28px;
+      margin-top: 18px;
+    }
+
+    h1,
+    h2,
+    h3 {
+      line-height: 1.25;
+      margin: 0;
+    }
+
+    h1 {
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      letter-spacing: -0.04em;
+    }
+
+    h2 {
+      margin-bottom: 14px;
+      font-size: 1.35rem;
+    }
+
+    h3 {
+      margin-bottom: 8px;
+      font-size: 1.25rem;
+    }
+
+    .subtitle,
+    .meta {
+      color: var(--muted);
+    }
+
+    .subtitle {
+      max-width: 760px;
+      margin: 14px 0 0;
+      font-size: 1.08rem;
+    }
+
+    .meta {
+      margin: 0 0 14px;
+      font-size: 0.95rem;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      min-height: 32px;
+      padding: 6px 11px;
+      margin-bottom: 14px;
+      border-radius: 999px;
+      background: #eef3ff;
+      color: var(--accent);
+      font-weight: 700;
+      font-size: 0.88rem;
+    }
+
+    .figures {
+      display: grid;
+      gap: 16px;
+      margin-top: 18px;
+    }
+
+    figure {
+      margin: 0;
+      padding: 12px;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: #fbfcff;
+    }
+
+    figure img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    figcaption {
+      margin-top: 10px;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .paper-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 14px 0 16px;
+    }
+
+    .paper-link {
+      display: inline-flex;
+      align-items: center;
+      min-height: 34px;
+      padding: 6px 11px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: #ffffff;
+      font-weight: 700;
+      font-size: 0.92rem;
+    }
+
+    ul {
+      margin: 10px 0 0;
+      padding-left: 20px;
+    }
+
+    li + li {
+      margin-top: 7px;
+    }
+
+    footer {
+      margin-top: 28px;
+      color: var(--muted);
+      text-align: center;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 640px) {
+      .hero,
+      .paper,
+      .section {
+        padding: 22px;
+      }
+
+      .nav {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <nav class="nav" aria-label="Primary navigation">
+      <a href="index.html">Leheng Zhang</a>
+      <a href="Leheng%20Zhang%20CV.pdf">Download CV</a>
+    </nav>
+
+    <section class="hero">
+      <h1>Selected Papers</h1>
+      <p class="subtitle">
+        My research focuses on multimodal sentiment analysis, aiming to develop AI frameworks
+        that support the full lifecycle of multimodal model development, including training,
+        inference, and evaluation.
+      </p>
+    </section>
+
+    <article class="paper">
+      <span class="badge">arXiv Preprint · Acceptance Expected</span>
+      <h2>GRCF: Two-Stage Groupwise Ranking and Calibration Framework for Multimodal Sentiment Analysis</h2>
+      <p class="meta">
+        Manning Gao, Leheng Zhang, Shiqin Han, Haifeng Hu, Yuncheng Jiang, and Sijie Mai.
+        arXiv:2601.09606. Average review score: 3.6, with no negative reviews.
+      </p>
+      <div class="paper-links">
+        <a class="paper-link" href="https://arxiv.org/abs/2601.09606">arXiv Preprint</a>
+      </div>
+      <p>
+        GRCF addresses key limitations in multimodal sentiment analysis: pointwise regression is
+        sensitive to label noise and ignores relative sentiment order, while pairwise ordinal
+        learning often treats all comparisons uniformly and uses static ranking margins. Inspired
+        by Group Relative Policy Optimization, GRCF introduces a two-stage framework that preserves
+        relative ordinal structure while keeping absolute sentiment scores calibrated.
+      </p>
+      <ul>
+        <li>Stage 1 uses a GRPO-inspired advantage-weighted dynamic margin ranking loss to focus on difficult sample groups.</li>
+        <li>Stage 2 applies an MAE-driven calibration objective to align predicted sentiment magnitudes with gold scores.</li>
+        <li>The framework targets core regression benchmarks and also extends to classification tasks such as humor and sarcasm detection.</li>
+      </ul>
+      <div class="figures" aria-label="GRCF figures">
+        <figure>
+          <img src="GRCF_intro.png" alt="GRCF comparison of pointwise regression, pairwise ordinary learning, and group-aware ranking">
+          <figcaption>GRCF overview: from pointwise regression and pairwise ordinal learning to group-aware ranking.</figcaption>
+        </figure>
+        <figure>
+          <img src="GRCF_model.png" alt="GRCF model architecture and group-aware ranking loss">
+          <figcaption>GRCF model architecture: multimodal encoders, fusion, calibration, and group-aware ranking loss.</figcaption>
+        </figure>
+      </div>
+    </article>
+
+    <article class="paper">
+      <span class="badge">EMNLP 2026 Submission</span>
+      <h2>PRISM: Primary-Centric Multimodal Fusion with Information Bottlenecks and Confidence-Aware Gating</h2>
+      <p class="meta">First-author submission.</p>
+      <p>
+        PRISM studies dynamic primary modality selection for multimodal sentiment analysis.
+        It focuses on using a primary modality as the organizing signal while suppressing noisy
+        modality information through information bottlenecks and confidence-aware gating.
+      </p>
+      <ul>
+        <li>Selects a primary modality dynamically instead of relying on fixed fusion rules.</li>
+        <li>Suppresses noisy modality features with information bottleneck mechanisms.</li>
+        <li>Improves trainable modality selection with confidence-aware gating.</li>
+      </ul>
+      <div class="figures" aria-label="PRISM figures">
+        <figure>
+          <img src="PRISM_intro.png" alt="PRISM primary-centric modality selection and noise suppression overview">
+          <figcaption>PRISM motivation: primary-centric selection with information bottlenecks and confidence-guided noise suppression.</figcaption>
+        </figure>
+        <figure>
+          <img src="PRISM_model_plot.png" alt="PRISM model architecture for multimodal sentiment analysis">
+          <figcaption>PRISM architecture with dynamic primary modality selection, InfoGate fusion, and information bottleneck losses.</figcaption>
+        </figure>
+      </div>
+    </article>
+
+    <section class="section">
+      <h2>Research Direction</h2>
+      <p>
+        These works are part of my broader interest in multimodal affective computing,
+        multimodal learning, and reliable AI systems for language, vision, and interaction data.
+      </p>
+    </section>
+
+    <footer>
+      <p><a href="index.html">Back to homepage</a></p>
+    </footer>
+  </main>
+</body>
+</html>
