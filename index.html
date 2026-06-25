@@ -160,6 +160,49 @@
       margin-top: 6px;
     }
 
+    .pub-item {
+      display: block;
+      padding: 16px 0;
+      border-top: 1px solid var(--line);
+      color: inherit;
+    }
+
+    .pub-item:first-of-type {
+      padding-top: 0;
+      border-top: 0;
+    }
+
+    .pub-item:hover h3 {
+      color: var(--accent);
+    }
+
+    .pub-item h3 {
+      margin-bottom: 8px;
+      font-size: 1rem;
+      transition: color 0.15s ease;
+    }
+
+    .status {
+      display: inline-flex;
+      align-items: center;
+      min-height: 28px;
+      padding: 4px 10px;
+      margin-bottom: 8px;
+      border-radius: 999px;
+      font-size: 0.82rem;
+      font-weight: 700;
+    }
+
+    .status.accepted {
+      background: #e8f7ee;
+      color: #1f7a45;
+    }
+
+    .status.review {
+      background: #eef3ff;
+      color: var(--accent);
+    }
+
     footer {
       margin-top: 28px;
       color: var(--muted);
@@ -194,7 +237,9 @@
         </div>
         <div class="actions">
           <a class="button" href="Leheng%20Zhang%20CV.pdf">Download CV</a>
-          <a class="button secondary" href="papers.html">Selected Papers</a>
+          <a class="button secondary" href="papers.html">Publications</a>
+          <a class="button secondary" href="https://scholar.google.com/citations?user=WhIDZngAAAAJ&amp;hl=en">Google Scholar</a>
+          <a class="button secondary" href="https://github.com/lehengzhangJacob">GitHub</a>
         </div>
       </div>
     </section>
@@ -203,14 +248,11 @@
       <h2>About</h2>
       <p>
         I am a junior undergraduate student in Computer Science and Technology at South China Normal University.
-        My research interests center on multimodal affective computing, multimodal learning, natural language processing,
-        embodied AI, and AI for science.
+        My research interests center on multimodal learning, embodied intelligence, and AI for science.
       </p>
       <div class="tags" aria-label="Research interests">
-        <span class="pill">Multimodal Affective Computing</span>
         <span class="pill">Multimodal Learning</span>
-        <span class="pill">NLP</span>
-        <span class="pill">Embodied AI</span>
+        <span class="pill">Embodied Intelligence</span>
         <span class="pill">AI for Science</span>
       </div>
     </section>
@@ -255,10 +297,36 @@
         <p class="meta">Advisor: Prof. Sijie Mai, SCNU | Jul 2025</p>
         <ul>
           <li>Conducted multimodal sentiment analysis using pretrained language models and multimodal large language models.</li>
-          <li>Prepared two papers under submission to ACM Multimedia and two first-author papers under submission to EMNLP.</li>
-          <li>One ACM Multimedia submission received an average score of 3.6 with no negative reviews and may have the possibility of being selected as an Oral presentation.</li>
+          <li>Two papers are under review at ACM Multimedia 2026 (GRCF and Deconfounding).</li>
+          <li>Two first-author papers are under review at EMNLP 2026 (PRISM and RITHM).</li>
+          <li>One paper has been accepted at Interspeech 2026 on binary depression detection via advantage-weighting ranking.</li>
+          <li>GRCF received an average review score of 3.6 with no negative reviews, is expected to have a strong chance of acceptance, and may have the possibility of being selected as an Oral presentation.</li>
         </ul>
       </article>
+    </section>
+
+    <section class="section" id="publications">
+      <h2>Publications</h2>
+      <a class="pub-item" href="papers.html#interspeech">
+        <span class="status accepted">Interspeech 2026 · Accepted</span>
+        <h3>Uncovering Latent Depression Severity for Binary Depression Detection via Advantage-weighting Ranking</h3>
+      </a>
+      <a class="pub-item" href="papers.html#grcf">
+        <span class="status review">ACM Multimedia 2026 · Under Review</span>
+        <h3>GRCF: Two-Stage Groupwise Ranking and Calibration Framework for Multimodal Sentiment Analysis</h3>
+      </a>
+      <a class="pub-item" href="papers.html#deconfounding">
+        <span class="status review">ACM Multimedia 2026 · Under Review</span>
+        <h3>Deconfounding Multimodal Affective Computing via Minimal Global Causal Representations</h3>
+      </a>
+      <a class="pub-item" href="papers.html#prism">
+        <span class="status review">EMNLP 2026 · Under Review · First Author</span>
+        <h3>PRISM: Primary-Centric Multimodal Fusion with Information Bottlenecks and Confidence-Aware Gating</h3>
+      </a>
+      <a class="pub-item" href="papers.html#rithm">
+        <span class="status review">EMNLP 2026 · Under Review · First Author</span>
+        <h3>RITHM: Recursive Information-Theoretic Halting for Multimodal Sentiment Understanding</h3>
+      </a>
     </section>
 
     <section class="section" id="experience">

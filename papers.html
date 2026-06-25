@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Selected Papers | Leheng Zhang</title>
+  <title>Publications | Leheng Zhang</title>
   <style>
     :root {
       color-scheme: light;
@@ -13,6 +13,8 @@
       --muted: #5e6a7d;
       --accent: #315fbe;
       --line: #dfe5f0;
+      --accepted: #1f7a45;
+      --accepted-bg: #e8f7ee;
     }
 
     * {
@@ -65,10 +67,14 @@
       margin-bottom: 20px;
     }
 
-    .paper,
     .section {
-      padding: 28px;
+      padding: 24px 28px 8px;
       margin-top: 18px;
+    }
+
+    .paper {
+      padding: 28px;
+      margin-top: 14px;
     }
 
     h1,
@@ -120,6 +126,11 @@
       color: var(--accent);
       font-weight: 700;
       font-size: 0.88rem;
+    }
+
+    .badge.accepted {
+      background: var(--accepted-bg);
+      color: var(--accepted);
     }
 
     .figures {
@@ -202,84 +213,152 @@
   <main class="page">
     <nav class="nav" aria-label="Primary navigation">
       <a href="index.html">Leheng Zhang</a>
-      <a href="Leheng%20Zhang%20CV.pdf">Download CV</a>
+      <span>
+        <a href="Leheng%20Zhang%20CV.pdf">Download CV</a>
+        ·
+        <a href="https://scholar.google.com/citations?user=WhIDZngAAAAJ&amp;hl=en">Google Scholar</a>
+        ·
+        <a href="https://github.com/lehengzhangJacob">GitHub</a>
+      </span>
     </nav>
 
     <section class="hero">
-      <h1>Selected Papers</h1>
+      <h1>Publications</h1>
       <p class="subtitle">
-        My research focuses on multimodal sentiment analysis, aiming to develop AI frameworks
-        that support the full lifecycle of multimodal model development, including training,
-        inference, and evaluation.
+        My research focuses on multimodal affective computing, including sentiment analysis,
+        depression detection, and robust multimodal fusion under distribution shift.
       </p>
     </section>
 
-    <article class="paper">
-      <span class="badge">arXiv Preprint · Acceptance Expected</span>
-      <h2>GRCF: Two-Stage Groupwise Ranking and Calibration Framework for Multimodal Sentiment Analysis</h2>
-      <p class="meta">
-        Manning Gao, Leheng Zhang, Shiqin Han, Haifeng Hu, Yuncheng Jiang, and Sijie Mai.
-        arXiv:2601.09606. Average review score: 3.6, with no negative reviews.
-      </p>
-      <div class="paper-links">
-        <a class="paper-link" href="https://arxiv.org/abs/2601.09606">arXiv Preprint</a>
-      </div>
-      <p>
-        GRCF addresses key limitations in multimodal sentiment analysis: pointwise regression is
-        sensitive to label noise and ignores relative sentiment order, while pairwise ordinal
-        learning often treats all comparisons uniformly and uses static ranking margins. Inspired
-        by Group Relative Policy Optimization, GRCF introduces a two-stage framework that preserves
-        relative ordinal structure while keeping absolute sentiment scores calibrated.
-      </p>
-      <ul>
-        <li>Stage 1 uses a GRPO-inspired advantage-weighted dynamic margin ranking loss to focus on difficult sample groups.</li>
-        <li>Stage 2 applies an MAE-driven calibration objective to align predicted sentiment magnitudes with gold scores.</li>
-        <li>The framework targets core regression benchmarks and also extends to classification tasks such as humor and sarcasm detection.</li>
-      </ul>
-      <div class="figures" aria-label="GRCF figures">
-        <figure>
-          <img src="GRCF_intro.png" alt="GRCF comparison of pointwise regression, pairwise ordinary learning, and group-aware ranking">
-          <figcaption>GRCF overview: from pointwise regression and pairwise ordinal learning to group-aware ranking.</figcaption>
-        </figure>
-        <figure>
-          <img src="GRCF_model.png" alt="GRCF model architecture and group-aware ranking loss">
-          <figcaption>GRCF model architecture: multimodal encoders, fusion, calibration, and group-aware ranking loss.</figcaption>
-        </figure>
-      </div>
-    </article>
+    <section class="section" id="accepted">
+      <h2>Accepted</h2>
+      <article class="paper" id="interspeech">
+        <span class="badge accepted">Interspeech 2026 · Accepted</span>
+        <h3>Uncovering Latent Depression Severity for Binary Depression Detection via Advantage-weighting Ranking</h3>
+        <p class="meta">Manning Gao, Tingyi Liu, Leheng Zhang, Haifeng Hu, Yuncheng Jiang, and Sijie Mai.</p>
+        <div class="paper-links">
+          <a class="paper-link" href="papers/interspeech-depression.pdf">PDF</a>
+        </div>
+        <p>
+          This work proposes a fine-grained multimodal framework for automatic depression detection
+          using audio-visual data. It introduces Binary Advantage-weighting Ranking Loss to optimize
+          latent space distributions through hard-pair mining and intra-class compactness.
+        </p>
+        <ul>
+          <li>Uses a temporal encoder and mutual transformer for deep cross-modal fusion.</li>
+          <li>Reconstructs latent ordinal structure by prioritizing hard pairs in binary depression detection.</li>
+          <li>Achieves strong results on D-vlog and LMVD benchmarks.</li>
+        </ul>
+      </article>
+    </section>
 
-    <article class="paper">
-      <span class="badge">EMNLP 2026 Submission</span>
-      <h2>PRISM: Primary-Centric Multimodal Fusion with Information Bottlenecks and Confidence-Aware Gating</h2>
-      <p class="meta">First-author submission.</p>
-      <p>
-        PRISM studies dynamic primary modality selection for multimodal sentiment analysis.
-        It focuses on using a primary modality as the organizing signal while suppressing noisy
-        modality information through information bottlenecks and confidence-aware gating.
-      </p>
-      <ul>
-        <li>Selects a primary modality dynamically instead of relying on fixed fusion rules.</li>
-        <li>Suppresses noisy modality features with information bottleneck mechanisms.</li>
-        <li>Improves trainable modality selection with confidence-aware gating.</li>
-      </ul>
-      <div class="figures" aria-label="PRISM figures">
-        <figure>
-          <img src="PRISM_intro.png" alt="PRISM primary-centric modality selection and noise suppression overview">
-          <figcaption>PRISM motivation: primary-centric selection with information bottlenecks and confidence-guided noise suppression.</figcaption>
-        </figure>
-        <figure>
-          <img src="PRISM_model_plot.png" alt="PRISM model architecture for multimodal sentiment analysis">
-          <figcaption>PRISM architecture with dynamic primary modality selection, InfoGate fusion, and information bottleneck losses.</figcaption>
-        </figure>
-      </div>
-    </article>
+    <section class="section" id="acmmm">
+      <h2>ACM Multimedia 2026 · Under Review</h2>
 
-    <section class="section">
-      <h2>Research Direction</h2>
-      <p>
-        These works are part of my broader interest in multimodal affective computing,
-        multimodal learning, and reliable AI systems for language, vision, and interaction data.
-      </p>
+      <article class="paper" id="grcf">
+        <span class="badge">Under Review · arXiv · Acceptance Expected</span>
+        <h3>GRCF: Two-Stage Groupwise Ranking and Calibration Framework for Multimodal Sentiment Analysis</h3>
+        <p class="meta">
+          Manning Gao, Leheng Zhang, Shiqin Han, Haifeng Hu, Yuncheng Jiang, and Sijie Mai.
+          arXiv:2601.09606. Average review score: 3.6, with no negative reviews.
+        </p>
+        <div class="paper-links">
+          <a class="paper-link" href="papers/grcf.pdf">PDF</a>
+          <a class="paper-link" href="https://arxiv.org/abs/2601.09606">arXiv</a>
+        </div>
+        <p>
+          GRCF addresses limitations of pointwise regression and pairwise ordinal learning in
+          multimodal sentiment analysis. Inspired by Group Relative Policy Optimization, it uses a
+          two-stage framework that preserves relative ordinal structure while keeping absolute
+          sentiment scores calibrated.
+        </p>
+        <ul>
+          <li>Stage 1 uses a GRPO-inspired advantage-weighted dynamic margin ranking loss.</li>
+          <li>Stage 2 applies an MAE-driven calibration objective for score alignment.</li>
+          <li>Expected to have a strong chance of acceptance and may have the possibility of Oral presentation.</li>
+        </ul>
+        <div class="figures" aria-label="GRCF figures">
+          <figure>
+            <img src="GRCF_intro.png" alt="GRCF comparison of pointwise regression, pairwise ordinary learning, and group-aware ranking">
+            <figcaption>GRCF overview: from pointwise regression and pairwise ordinal learning to group-aware ranking.</figcaption>
+          </figure>
+          <figure>
+            <img src="GRCF_model.png" alt="GRCF model architecture and group-aware ranking loss">
+            <figcaption>GRCF model architecture: multimodal encoders, fusion, calibration, and group-aware ranking loss.</figcaption>
+          </figure>
+        </div>
+      </article>
+
+      <article class="paper" id="deconfounding">
+        <span class="badge">Under Review</span>
+        <h3>Deconfounding Multimodal Affective Computing via Minimal Global Causal Representations</h3>
+        <p class="meta">ACM Multimedia 2026 submission.</p>
+        <div class="paper-links">
+          <a class="paper-link" href="papers/deconfounding.pdf">PDF</a>
+        </div>
+        <p>
+          This paper proposes the Causal Multimodal Information Bottleneck (CaMIB) framework to learn
+          generalized multimodal representations under distribution shifts. It disentangles causal and
+          confounding branches and applies causal intervention with instrumental variable constraints.
+        </p>
+        <ul>
+          <li>Purifies unimodal inputs through variational information bottlenecks.</li>
+          <li>Uses a mask generator to split fused representations into causal and confounding branches.</li>
+          <li>Evaluated on sentiment analysis, humor detection, sarcasm detection, and OOD test sets.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="section" id="emnlp">
+      <h2>EMNLP 2026 · Under Review</h2>
+
+      <article class="paper" id="prism">
+        <span class="badge">Under Review · First Author</span>
+        <h3>PRISM: Primary-Centric Multimodal Fusion with Information Bottlenecks and Confidence-Aware Gating</h3>
+        <p class="meta">First-author submission to EMNLP 2026.</p>
+        <div class="paper-links">
+          <a class="paper-link" href="papers/prism.pdf">PDF</a>
+        </div>
+        <p>
+          PRISM studies dynamic primary modality selection for multimodal sentiment analysis.
+          It uses Variational Token Bottlenecks, a Differentiable Primary Router, and stacked
+          InfoGate layers for confidence-aware fusion.
+        </p>
+        <ul>
+          <li>Selects a primary modality dynamically instead of relying on fixed fusion rules.</li>
+          <li>Suppresses noisy modality features with information bottleneck mechanisms.</li>
+          <li>Generalizes to both regression and binary humor/sarcasm classification tasks.</li>
+        </ul>
+        <div class="figures" aria-label="PRISM figures">
+          <figure>
+            <img src="PRISM_intro.png" alt="PRISM primary-centric modality selection and noise suppression overview">
+            <figcaption>PRISM motivation: primary-centric selection with information bottlenecks and confidence-guided noise suppression.</figcaption>
+          </figure>
+          <figure>
+            <img src="PRISM_model_plot.png" alt="PRISM model architecture for multimodal sentiment analysis">
+            <figcaption>PRISM architecture with dynamic primary modality selection, InfoGate fusion, and information bottleneck losses.</figcaption>
+          </figure>
+        </div>
+      </article>
+
+      <article class="paper" id="rithm">
+        <span class="badge">Under Review · First Author</span>
+        <h3>RITHM: Recursive Information-Theoretic Halting for Multimodal Sentiment Understanding</h3>
+        <p class="meta">First-author submission to EMNLP 2026.</p>
+        <div class="paper-links">
+          <a class="paper-link" href="papers/rithm.pdf">PDF</a>
+        </div>
+        <p>
+          RITHM is a text-anchored framework for sample-adaptive multimodal reasoning in affective
+          understanding. It combines cascaded variational information bottlenecks, recursive latent
+          refinement, and information-theoretic halting for adaptive computation depth.
+        </p>
+        <ul>
+          <li>Distills task-relevant acoustic and visual evidence into compact latent representations.</li>
+          <li>Updates bottleneck states recursively according to sample difficulty.</li>
+          <li>Evaluated on multimodal sentiment analysis and multimodal humor detection tasks.</li>
+        </ul>
+      </article>
     </section>
 
     <footer>
