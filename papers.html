@@ -214,7 +214,9 @@
     <nav class="nav" aria-label="Primary navigation">
       <a href="index.html">Leheng Zhang</a>
       <span>
-        <a href="Leheng%20Zhang%20CV.pdf">Download CV</a>
+        <a href="Leheng_Zhang_Resume.pdf">Download CV (EN)</a>
+        ·
+        <a href="%E5%BC%A0%E4%B9%90%E6%A1%81_%E4%B8%AA%E4%BA%BA%E7%AE%80%E5%8E%86.pdf">Download CV (CN)</a>
         ·
         <a href="https://scholar.google.com/citations?user=WhIDZngAAAAJ&amp;hl=en">Google Scholar</a>
         ·
@@ -225,57 +227,34 @@
     <section class="hero">
       <h1>Publications</h1>
       <p class="subtitle">
-        My research focuses on multimodal affective computing, including sentiment analysis,
+        My research focuses on multimodal computing, including sentiment analysis,
         depression detection, and robust multimodal fusion under distribution shift.
       </p>
     </section>
 
     <section class="section" id="accepted">
       <h2>Accepted</h2>
-      <article class="paper" id="interspeech">
-        <span class="badge accepted">Interspeech 2026 · Accepted</span>
-        <h3>Uncovering Latent Depression Severity for Binary Depression Detection via Advantage-weighting Ranking</h3>
-        <p class="meta">Manning Gao, Tingyi Liu, Leheng Zhang, Haifeng Hu, Yuncheng Jiang, and Sijie Mai.</p>
-        <div class="paper-links">
-          <a class="paper-link" href="papers/interspeech-depression.pdf">PDF</a>
-        </div>
-        <p>
-          This work proposes a fine-grained multimodal framework for automatic depression detection
-          using audio-visual data. It introduces Binary Advantage-weighting Ranking Loss to optimize
-          latent space distributions through hard-pair mining and intra-class compactness.
-        </p>
-        <ul>
-          <li>Uses a temporal encoder and mutual transformer for deep cross-modal fusion.</li>
-          <li>Reconstructs latent ordinal structure by prioritizing hard pairs in binary depression detection.</li>
-          <li>Achieves strong results on D-vlog and LMVD benchmarks.</li>
-        </ul>
-      </article>
-    </section>
-
-    <section class="section" id="acmmm">
-      <h2>ACM Multimedia 2026 · Under Review</h2>
 
       <article class="paper" id="grcf">
-        <span class="badge">Under Review · arXiv · Acceptance Expected</span>
-        <h3>GRCF: Two-Stage Groupwise Ranking and Calibration Framework for Multimodal Sentiment Analysis</h3>
+        <span class="badge accepted">ACM Multimedia 2026 · Accepted · 2nd Author</span>
+        <h3>GRCF: Group-wise Ranking and Calibration Framework for Multimodal Sentiment Analysis</h3>
         <p class="meta">
           Manning Gao, Leheng Zhang, Shiqin Han, Haifeng Hu, Yuncheng Jiang, and Sijie Mai.
-          arXiv:2601.09606. Average review score: 3.6, with no negative reviews.
+          arXiv:2601.09606.
         </p>
         <div class="paper-links">
           <a class="paper-link" href="papers/grcf.pdf">PDF</a>
           <a class="paper-link" href="https://arxiv.org/abs/2601.09606">arXiv</a>
         </div>
         <p>
-          GRCF addresses limitations of pointwise regression and pairwise ordinal learning in
-          multimodal sentiment analysis. Inspired by Group Relative Policy Optimization, it uses a
-          two-stage framework that preserves relative ordinal structure while keeping absolute
-          sentiment scores calibrated.
+          Inspired by group-relative advantage weighting in GRPO, GRCF introduces adaptive
+          hard-sample weighting, dynamic margins, and two-stage ranking calibration for
+          multimodal sentiment analysis.
         </p>
         <ul>
-          <li>Stage 1 uses a GRPO-inspired advantage-weighted dynamic margin ranking loss.</li>
-          <li>Stage 2 applies an MAE-driven calibration objective for score alignment.</li>
-          <li>Expected to have a strong chance of acceptance and may have the possibility of Oral presentation.</li>
+          <li>Preserves relative ordinal structure while calibrating absolute sentiment scores.</li>
+          <li>Uses GRPO-inspired advantage-weighted ranking with dynamic margins.</li>
+          <li>Accepted at ACM Multimedia 2026 (second author).</li>
         </ul>
         <div class="figures" aria-label="GRCF figures">
           <figure>
@@ -289,45 +268,44 @@
         </div>
       </article>
 
-      <article class="paper" id="deconfounding">
-        <span class="badge">Under Review</span>
-        <h3>Deconfounding Multimodal Affective Computing via Minimal Global Causal Representations</h3>
-        <p class="meta">ACM Multimedia 2026 submission.</p>
+      <article class="paper" id="interspeech">
+        <span class="badge accepted">Interspeech 2026 · Accepted (Oral) · 3rd Author</span>
+        <h3>Uncovering Latent Depression Severity for Binary Depression Detection via Advantage-weighting Ranking</h3>
+        <p class="meta">Manning Gao, Tingyi Liu, Leheng Zhang, Haifeng Hu, Yuncheng Jiang, and Sijie Mai.</p>
         <div class="paper-links">
-          <a class="paper-link" href="papers/deconfounding.pdf">PDF</a>
+          <a class="paper-link" href="papers/interspeech-depression.pdf">PDF</a>
         </div>
         <p>
-          This paper proposes the Causal Multimodal Information Bottleneck (CaMIB) framework to learn
-          generalized multimodal representations under distribution shifts. It disentangles causal and
-          confounding branches and applies causal intervention with instrumental variable constraints.
+          This work introduces the BAR loss to recover the latent ordinal structure of depression
+          severity and improve hard-sample discrimination for binary depression detection.
         </p>
         <ul>
-          <li>Purifies unimodal inputs through variational information bottlenecks.</li>
-          <li>Uses a mask generator to split fused representations into causal and confounding branches.</li>
-          <li>Evaluated on sentiment analysis, humor detection, sarcasm detection, and OOD test sets.</li>
+          <li>Uses a temporal encoder and mutual transformer for deep cross-modal fusion.</li>
+          <li>Reconstructs latent ordinal structure by prioritizing hard pairs.</li>
+          <li>Accepted at Interspeech 2026 as an Oral presentation (third author).</li>
         </ul>
       </article>
     </section>
 
-    <section class="section" id="emnlp">
-      <h2>EMNLP 2026 · Under Review</h2>
+    <section class="section" id="under-review">
+      <h2>Under Review</h2>
 
       <article class="paper" id="prism">
-        <span class="badge">Under Review · First Author</span>
+        <span class="badge">Information Fusion · Under Review · First Author</span>
         <h3>PRISM: Primary-Centric Multimodal Fusion with Information Bottlenecks and Confidence-Aware Gating</h3>
-        <p class="meta">First-author submission to EMNLP 2026.</p>
+        <p class="meta">First-author submission to Information Fusion.</p>
         <div class="paper-links">
           <a class="paper-link" href="papers/prism.pdf">PDF</a>
         </div>
         <p>
-          PRISM studies dynamic primary modality selection for multimodal sentiment analysis.
-          It uses Variational Token Bottlenecks, a Differentiable Primary Router, and stacked
-          InfoGate layers for confidence-aware fusion.
+          PRISM proposes a primary-modality-driven dynamic fusion framework combining variational
+          token bottlenecks, sample-level differentiable primary-modality routing, and
+          confidence-aware gating.
         </p>
         <ul>
           <li>Selects a primary modality dynamically instead of relying on fixed fusion rules.</li>
           <li>Suppresses noisy modality features with information bottleneck mechanisms.</li>
-          <li>Generalizes to both regression and binary humor/sarcasm classification tasks.</li>
+          <li>Uses confidence-aware gating for trainable auxiliary modality selection.</li>
         </ul>
         <div class="figures" aria-label="PRISM figures">
           <figure>
@@ -342,21 +320,39 @@
       </article>
 
       <article class="paper" id="rithm">
-        <span class="badge">Under Review · First Author</span>
+        <span class="badge">EMNLP 2026 · Under Review · First Author</span>
         <h3>RITHM: Recursive Information-Theoretic Halting for Multimodal Sentiment Understanding</h3>
         <p class="meta">First-author submission to EMNLP 2026.</p>
         <div class="paper-links">
           <a class="paper-link" href="papers/rithm.pdf">PDF</a>
         </div>
         <p>
-          RITHM is a text-anchored framework for sample-adaptive multimodal reasoning in affective
-          understanding. It combines cascaded variational information bottlenecks, recursive latent
-          refinement, and information-theoretic halting for adaptive computation depth.
+          RITHM combines recursive information bottlenecks, information-gain-based halting, and
+          syntax-aware composition for sample-adaptive multimodal reasoning.
         </p>
         <ul>
           <li>Distills task-relevant acoustic and visual evidence into compact latent representations.</li>
           <li>Updates bottleneck states recursively according to sample difficulty.</li>
           <li>Evaluated on multimodal sentiment analysis and multimodal humor detection tasks.</li>
+        </ul>
+      </article>
+
+      <article class="paper" id="deconfounding">
+        <span class="badge">AAAI 2027 · Under Review · 2nd Author</span>
+        <h3>Deconfounding Multimodal Affective Computing via Minimal Global Causal Representations</h3>
+        <p class="meta">AAAI 2027 submission (second author).</p>
+        <div class="paper-links">
+          <a class="paper-link" href="papers/deconfounding.pdf">PDF</a>
+        </div>
+        <p>
+          This paper proposes CaMIB, which disentangles causal and confounding representations
+          through information bottlenecks, causal intervention, and instrumental-variable
+          constraints to improve OOD generalization under distribution shifts.
+        </p>
+        <ul>
+          <li>Purifies unimodal inputs through variational information bottlenecks.</li>
+          <li>Splits fused representations into causal and confounding branches via a mask generator.</li>
+          <li>Evaluated on sentiment analysis, humor detection, sarcasm detection, and OOD test sets.</li>
         </ul>
       </article>
     </section>
