@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Publications | Leheng Zhang</title>
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+  <header class="masthead">
+    <div class="masthead-inner">
+      <a class="site-title" href="index.html">Leheng Zhang</a>
+      <nav class="nav">
+        <a href="index.html">About</a>
+        <a class="active" href="publications.html">Publications</a>
+        <a href="awards.html">Awards</a>
+        <a href="cv.html">CV</a>
+      </nav>
+    </div>
+  </header>
+  <div class="layout">
+    <aside class="sidebar">
+      <img class="avatar" src="images/profile.jpg" alt="Portrait of Leheng Zhang">
+      <h1>Leheng Zhang</h1>
+      <p class="bio">B.Eng. Candidate, Computer Science, SCNU</p>
+      <p class="meta">Guangzhou, China</p>
+      <div class="social">
+        <a href="mailto:lehengzhang@m.scnu.edu.cn">Email</a>
+        <a href="https://scholar.google.com/citations?user=WhIDZngAAAAJ&amp;hl=en">Scholar</a>
+        <a href="https://github.com/lehengzhangJacob">GitHub</a>
+      </div>
+    </aside>
+    <main class="page">
+      <h2>Publications</h2>
+      <p>You can also find my articles on my <a href="https://scholar.google.com/citations?user=WhIDZngAAAAJ&amp;hl=en">Google Scholar profile</a>.</p>
+
+      <h2>Conference Papers</h2>
+      <article class="paper" id="grcf">
+        <span class="badge accepted">ACM Multimedia 2026 · Accepted · 2nd Author</span>
+        <h3>GRCF: Group-wise Ranking and Calibration Framework for Multimodal Sentiment Analysis</h3>
+        <p class="item-meta">Manning Gao, Leheng Zhang, Shiqin Han, Haifeng Hu, Yuncheng Jiang, and Sijie Mai. arXiv:2601.09606.</p>
+        <p><a href="papers/grcf.pdf">PDF</a> · <a href="https://arxiv.org/abs/2601.09606">arXiv</a></p>
+        <p>Inspired by group-relative advantage weighting in GRPO, GRCF introduces adaptive hard-sample weighting, dynamic margins, and two-stage ranking calibration.</p>
+        <img src="images/GRCF_intro.png" alt="GRCF overview">
+        <figcaption>GRCF overview: from pointwise regression and pairwise ordinal learning to group-aware ranking.</figcaption>
+        <img src="images/GRCF_model.png" alt="GRCF model architecture">
+        <figcaption>GRCF model architecture: multimodal encoders, fusion, calibration, and group-aware ranking loss.</figcaption>
+      </article>
+      <article class="paper" id="interspeech">
+        <span class="badge accepted">Interspeech 2026 · Accepted (Oral) · 3rd Author</span>
+        <h3>Uncovering Latent Depression Severity for Binary Depression Detection via Advantage-weighting Ranking</h3>
+        <p class="item-meta">Manning Gao, Tingyi Liu, Leheng Zhang, Haifeng Hu, Yuncheng Jiang, and Sijie Mai.</p>
+        <p><a href="papers/interspeech-depression.pdf">PDF</a></p>
+        <p>This work introduces the BAR loss to recover the latent ordinal structure of depression severity and improve hard-sample discrimination.</p>
+      </article>
+      <article class="paper" id="deconfounding">
+        <span class="badge">AAAI 2027 · Under Review · 2nd Author</span>
+        <h3>Deconfounding Multimodal Affective Computing via Minimal Global Causal Representations</h3>
+        <p class="item-meta">Menghua Jiang, Leheng Zhang, Yuncheng Jiang, Haifeng Hu, and Sijie Mai.</p>
+        <p><a href="papers/deconfounding.pdf">PDF</a></p>
+        <p>CaMIB disentangles causal and confounding representations through information bottlenecks, causal intervention, and instrumental-variable constraints to improve OOD generalization.</p>
+      </article>
+
+      <h2>Journal Articles and Manuscripts</h2>
+      <article class="paper" id="prism">
+        <span class="badge">Information Fusion · Under Review · First Author</span>
+        <h3>PRISM: Primary-Centric Multimodal Fusion with Information Bottlenecks and Confidence-Aware Gating</h3>
+        <p class="item-meta">Leheng Zhang, Manning Gao, Menghua Jiang, Yuxia Lin, Haifeng Hu, Yewen Huang, and Sijie Mai.</p>
+        <p><a href="papers/prism.pdf">PDF</a></p>
+        <p>PRISM proposes a primary-modality-driven dynamic fusion framework combining variational token bottlenecks, sample-level differentiable primary-modality routing, and confidence-aware gating.</p>
+        <img src="images/PRISM_intro.png" alt="PRISM overview">
+        <figcaption>PRISM motivation: primary-centric selection with information bottlenecks and confidence-guided noise suppression.</figcaption>
+        <img src="images/PRISM_model_plot.png" alt="PRISM architecture">
+        <figcaption>PRISM architecture with dynamic primary modality selection, InfoGate fusion, and information bottleneck losses.</figcaption>
+      </article>
+      <article class="paper" id="rithm">
+        <span class="badge">Manuscript under revision · First Author</span>
+        <h3>RITHM: Recursive Information-Theoretic Halting for Multimodal Sentiment Understanding</h3>
+        <p class="item-meta">Leheng Zhang, Liyuan Pan, Manning Gao, Xueyi Wang, Yuxia Lin, and Sijie Mai.</p>
+        <p><a href="papers/rithm.pdf">PDF</a></p>
+        <p>RITHM combines recursive information bottlenecks, information-gain-based halting, and syntax-aware composition for sample-adaptive multimodal reasoning.</p>
+      </article>
+    </main>
+  </div>
+</body>
+</html>
