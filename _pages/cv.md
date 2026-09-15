@@ -14,7 +14,7 @@ redirect_from:
 
 ## Education
 
-- B.Eng. Candidate in Computer Science and Technology, South China Normal University, Sep. 2023 – Present
+- Senior B.Eng. Candidate in Computer Science and Technology, South China Normal University, Sep. 2023 – Present
   - GPA: 4.02/5.0; major ranking 1/160 (top 0.6%)
 - Short-term overseas exchange, University of British Columbia, Jul. 2024 – Aug. 2024
 

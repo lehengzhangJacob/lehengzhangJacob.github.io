@@ -7,14 +7,14 @@ redirect_from:
   - /about.html
 ---
 
-华南师范大学计算机科学与技术专业本科生（大三）。研究兴趣为多模态计算、具身智能与 AI for Science。目前在麦思杰教授指导下开展多模态情感计算研究，并与中山大学肿瘤防治中心曾木圣院士团队合作开展 EB 病毒靶向药物相关工作。计划继续攻读博士学位。
+华南师范大学计算机科学与技术专业本科生（大四）。研究兴趣为多模态计算、具身智能与 AI for Science。目前在麦思杰教授指导下开展多模态情感计算研究，并与中山大学肿瘤防治中心曾木圣院士团队合作开展 EB 病毒靶向药物相关工作。计划继续攻读博士学位。
 
-I am a junior undergraduate student in Computer Science and Technology at South China Normal University. My research interests are **multimodal computing**, **embodied intelligence**, and **AI for Science**. I work with Prof. Sijie Mai on multimodal affective computing, and I have collaborated with Academician Musheng Zeng's team at Sun Yat-sen University Cancer Center on targeted drug research for Epstein–Barr virus. I plan to pursue doctoral studies in artificial intelligence.
+I am a senior undergraduate student in Computer Science and Technology at South China Normal University. My research interests are **multimodal computing**, **embodied intelligence**, and **AI for Science**. I work with Prof. Sijie Mai on multimodal affective computing, and I have collaborated with Academician Musheng Zeng's team at Sun Yat-sen University Cancer Center on targeted drug research for Epstein–Barr virus. I plan to pursue doctoral studies in artificial intelligence.
 
 ## Education
 
 **South China Normal University**, Guangzhou, Guangdong  
-Computer Science and Technology, Junior | Sep. 2023 – Present
+Computer Science and Technology, Senior | Sep. 2023 – Present
 
 - GPA: 4.02/5.0
 - Major ranking: 1/160 (top 0.6%)
