@@ -138,6 +138,23 @@ ul {
 
 li + li { margin-top: 0.4em; }
 
+.news {
+  list-style: none;
+  padding-left: 0;
+}
+
+.news li {
+  display: grid;
+  grid-template-columns: 4.5rem minmax(0, 1fr);
+  gap: 0.75rem;
+  align-items: start;
+}
+
+.news time {
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+
 .paper {
   margin: 0 0 1.4rem;
 }
