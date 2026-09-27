@@ -95,15 +95,34 @@ a:hover { text-decoration: underline; }
 }
 
 .social {
-  margin-top: 14px;
+  margin: 14px auto 0;
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   gap: 6px;
+  width: max-content;
+  text-align: left;
 }
 
 .social a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
   color: var(--muted);
   font-size: 0.88rem;
+}
+
+.social .icon-wrap {
+  width: 1.15em;
+  display: inline-flex;
+  justify-content: center;
+  flex: 0 0 auto;
+}
+
+.social .icon {
+  height: 0.95em;
+  width: auto;
+  fill: currentColor;
 }
 
 .social a:hover { color: var(--accent); }
