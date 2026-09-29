@@ -42,7 +42,7 @@ Advisor: Prof. Sijie Mai, SCNU | May 2025 – Present
 
 - Used pretrained language models and multimodal large language models for multimodal sentiment analysis.
 - 1 paper accepted at ACM Multimedia 2026; 1 paper accepted at Interspeech 2026 (Oral).
-- 1 first-author paper under review at Information Fusion; 1 first-author manuscript under revision; 1 paper under review at AAAI 2027.
+- 1 first-author paper under review at Information Fusion; 1 first-author manuscript under revision.
 
 ## Internship
 
